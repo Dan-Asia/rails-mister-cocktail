@@ -1,0 +1,32 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.thefix.com/sites/default/files/styles/3col_222x186/public/socialdrinking.jpg);">
+  <div class="container">
+    <h1>Welcome to the whiskey bar <strong>GET DRUNK</strong> with <strong>GREAT PEOPLE</strong>!</h1>
+    <p>come create your whiskey cocktails</p>
+
+  </div>
+</div>
+
+
+
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://thequasifylife.com/wp-content/uploads/2018/10/4eab04a161722c6294e868c8bbecec97.jpg);">
+  <div class="container">
+    <h1>Create a whiskey cocktail!</h1>
+  </div>
+</div>
+<div class="container pt-5">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-xs-12 col-sm-6">
+        <%= link_to cocktail_path(cocktail.id) do %>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
+            <%= cocktail.name %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<%= link_to 'New Cocktail', new_cocktail_path %>
+
+
